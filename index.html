@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cyberpénal</title>
+<meta name="description" content="Cours, fiches infractions, actes d'enquête, jurisprudence et cas pratiques sur le droit pénal de la cybercriminalité, à partir des textes de Légifrance.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23101826'/%3E%3Cpath d='M9 11l5 5-5 5M16 22h7' stroke='%2333d1a0' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/site.css?v=30">
+<script>(function(){
+var F={inter:"Inter:wght@400;500;600;700",spacemono:"Space+Mono:ital,wght@0,400;0,700;1,400",oswald:"Oswald:wght@400;500;600;700",plexmono:"IBM+Plex+Mono:wght@400;500;600",archivo:"Archivo+Black",work:"Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400",mont:"Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400;1,700",atk:"Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400"};
+var P={neon:["inter","spacemono"],cyber:["oswald","inter","plexmono"],biseau:["oswald","mont","spacemono"],nuit:["archivo","work","spacemono"],duo:["oswald","inter","plexmono","archivo","work","spacemono"]};
+var deja={};
+window.CP_FONTS=function(skin,lisible){var l=(P[skin]||P.neon).slice();if(lisible)l.push("atk");l=l.filter(function(k){return !deja[k]});if(!l.length)return;l.forEach(function(k){deja[k]=1});var e=document.createElement("link");e.rel="stylesheet";e.href="https://fonts.googleapis.com/css2?family="+l.map(function(k){return F[k]}).join("&family=")+"&display=swap";document.head.appendChild(e)};
+var st={};try{st=JSON.parse(localStorage.getItem("cyberpenal.v1")||"{}")||{}}catch(e){}
+var s=st.skin||"neon",r=document.documentElement;r.setAttribute("data-skin",s);r.setAttribute("data-look",s==="duo"?(/^(accueil|tester)$/.test((location.hash||"").replace(/^#\/?/,"").split("/")[0]||"accueil")?"cyberviolet":"magclair"):s);
+window.CP_FONTS(s,st.lisible);
+if(/\.github\.io$/.test(location.hostname)){[["manifest","manifest.webmanifest"],["apple-touch-icon","icons/apple-touch-icon.png"]].forEach(function(x){var l=document.createElement("link");l.rel=x[0];l.href=x[1];document.head.appendChild(l)});var m=document.createElement("meta");m.name="theme-color";m.content="#141a2e";document.head.appendChild(m)}
+})();</script>
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="topbar">
+  <a href="#/accueil" class="logo"><span class="prompt">&gt;_</span><span class="mark" aria-hidden="true">◆</span> cyber<b>pénal</b></a>
+  <a class="theme-btn" href="#/recherche" aria-label="Rechercher dans le site" title="Rechercher">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L20 20" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+  </a>
+  <div class="skin-wrap">
+    <button class="theme-btn" id="themeBtn" aria-label="Changer d'habillage" title="Changer d'habillage" aria-haspopup="true" aria-expanded="false" aria-controls="skinMenu">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3a9 9 0 0 0 0 18c1.1 0 1.6-.8 1.6-1.6 0-.9-.7-1.3-.7-2.2 0-1 .8-1.6 1.8-1.6H17a4 4 0 0 0 4-4c0-4.7-4-8.6-9-8.6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="7.5" cy="11" r="1.4" fill="currentColor"/><circle cx="10" cy="7.3" r="1.4" fill="currentColor"/><circle cx="14.5" cy="7.3" r="1.4" fill="currentColor"/></svg>
+    </button>
+    <div class="skin-menu" id="skinMenu" role="menu" aria-label="Habillage" hidden>
+      <p class="skin-titre">Habillage</p>
+      <button role="menuitemradio" data-skin="neon"><i style="background:linear-gradient(135deg,#ffd3db 50%,#141a2e 50%)"></i>Rose néon</button>
+      <button role="menuitemradio" data-skin="cyber"><i style="background:linear-gradient(135deg,#0b0709 50%,#ff2a74 50%)"></i>Cyberpunk magenta</button>
+      <button role="menuitemradio" data-skin="nuit"><i style="background:linear-gradient(135deg,#141a2e 50%,#a855f7 50%)"></i>Magazine de nuit</button>
+      <button role="menuitemradio" data-skin="duo"><i style="background:linear-gradient(135deg,#1a0d33 50%,#f7f2f6 50%)"></i>Deux ambiances</button>
+      <button role="menuitemradio" data-skin="biseau"><i style="background:linear-gradient(135deg,#3b1670 50%,#ff2a74 50%)"></i>Violet biseauté</button>
+      <p class="skin-titre skin-sep">Lecture</p>
+      <div class="taille-row" role="group" aria-label="Taille du texte"><span>Taille du texte</span><button id="tailleMoins" aria-label="Texte plus petit">A−</button><span id="tailleVal">100 %</span><button id="taillePlus" aria-label="Texte plus grand">A+</button></div>
+      <button role="menuitemcheckbox" id="lisibleBtn" aria-checked="false"><i class="lisible-ico" aria-hidden="true">Aa</i>Police très lisible</button>
+    </div>
+  </div>
+  <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="sidebar">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+  </button>
+</header>
+
+<nav class="sidebar" id="sidebar" aria-label="Navigation principale">
+  <ul class="nav">
+    <li><a href="#/accueil" data-route="accueil">Accueil</a></li>
+    <li><a href="#/recherche" data-route="recherche">Rechercher</a></li>
+    <li class="nav-groupe">Apprendre</li>
+    <li><a href="#/cours" data-route="cours">Cours</a></li>
+    <li><a href="#/infractions" data-route="infractions">Fiches infractions</a></li>
+    <li><a href="#/procedure" data-route="procedure">Actes d'enquête</a></li>
+    <li><a href="#/enquetes" data-route="enquetes">L'enquête pas à pas</a></li>
+    <li><a href="#/ofac" data-route="ofac">L'OFAC</a></li>
+    <li><a href="#/jurisprudence" data-route="jurisprudence">Jurisprudence</a></li>
+    <li><a href="#/europe" data-route="europe">Europe et international</a></li>
+    <li><a href="#/victimes" data-route="victimes">Victimes : que faire ?</a></li>
+    <li><a href="#/ressources" data-route="ressources">Dispositifs publics</a></li>
+    <li><a href="#/nouveautes" data-route="nouveautes">Ce qui a changé</a></li>
+    <li><a href="#/arbre" data-route="arbre">Quelle infraction ?</a></li>
+    <li><a href="#/comparer" data-route="comparer">Comparer deux infractions</a></li>
+    <li><a href="#/lexique" data-route="lexique">Lexique</a></li>
+    <li class="nav-groupe">S'entraîner</li>
+    <li><a href="#/cas" data-route="cas">Cas pratiques</a></li>
+    <li><a href="#/tester" data-route="tester">Me tester</a></li>
+    <li><a href="#/revisions" data-route="revisions">Mes révisions</a></li>
+    <li><a href="#/atelier" data-route="atelier">L'atelier</a></li>
+    <li><a href="#/audition" data-route="audition">Simuler une audition</a></li>
+    <li><a href="#/peines" data-route="peines">Tableau des peines</a></li>
+    <li class="nav-groupe">Mes outils</li>
+    <li><a href="#/questions" data-route="questions">Mes questions</a></li>
+    <li><a href="#/perso" data-route="perso">Mon contenu</a></li>
+    <li><a href="#/carnet" data-route="carnet">Mon carnet</a></li>
+    <li><a href="#/appareils" data-route="appareils">Sur mes appareils</a></li>
+    <li><a href="#/sources" data-route="sources">Sources</a></li>
+  </ul>
+  <p class="side-note">Textes relus sur Légifrance<br>les 19 et 20 novembre 2026<br><span id="syncEtat"></span></p>
+</nav>
+<div class="scrim" id="scrim"></div>
+<main id="main" tabindex="-1"></main>
+
+<script src="js/site.js?v=30"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Seul le site est publié : pas les maquettes, les outils ni les réglages locaux
+maquettes/
+outils/
+.claude/
+__pycache__/
